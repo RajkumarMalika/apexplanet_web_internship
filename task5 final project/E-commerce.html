@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChicBoutique - Modern & Stylish</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="E-commerce.css">
+</head>
+<body class="antialiased text-slate-700">
+
+    <!-- App Container -->
+    <div id="app" class="min-h-screen">
+        
+        <!-- Header -->
+        <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-40">
+            <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center space-x-4">
+                        <a href="#" class="flex items-center space-x-2 text-2xl font-bold text-indigo-600" onclick="navigateTo('products')">
+                           <i class="fa-solid fa-shopping-bag"></i>
+                           <span>ChicBoutique</span>
+                        </a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#" class="nav-link text-gray-600 hover:text-indigo-600 transition-colors duration-300 px-3 py-2 rounded-md text-sm font-medium" data-page="products" onclick="navigateTo('products')">Home</a>
+                        <a href="#" class="nav-link text-gray-600 hover:text-indigo-600 transition-colors duration-300 px-3 py-2 rounded-md text-sm font-medium" data-page="orders" onclick="navigateTo('orders')">My Orders</a>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                         <button onclick="navigateTo('cart')" class="relative p-2 rounded-full text-gray-500 hover:bg-gray-100 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            <span class="sr-only">View cart</span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span id="cart-item-count" class="absolute -top-1 -right-1 bg-indigo-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main id="main-content" class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Products Page -->
+            <section id="page-products" class="page-section">
+                <h1 class="text-3xl font-bold tracking-tight text-slate-900 mb-6">Featured Products</h1>
+                <div id="product-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <!-- Product cards will be injected here -->
+                </div>
+            </section>
+
+            <!-- Cart Page -->
+            <section id="page-cart" class="page-section hidden">
+                <div id="cart-view">
+                    <!-- Cart content will be injected here -->
+                </div>
+            </section>
+
+            <!-- Checkout Page -->
+            <section id="page-checkout" class="page-section hidden">
+                 <!-- Checkout content will be injected here -->
+            </section>
+            
+            <!-- Order Confirmation Page -->
+            <section id="page-order-confirmation" class="page-section hidden">
+                <!-- Order confirmation content will be injected here -->
+            </section>
+
+            <!-- Orders Page -->
+            <section id="page-orders" class="page-section hidden">
+                <h1 class="text-3xl font-bold tracking-tight text-slate-900 mb-6">Your Order History</h1>
+                <div id="orders-list" class="space-y-6">
+                    <!-- Order history will be injected here -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-white border-t border-slate-200 mt-12">
+            <div class="container mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-sm text-slate-500">
+                <p>&copy; 2025 ChicBoutique. All rights reserved.</p>
+                <p class="mt-1">Modern & Stylish Apparel for Everyone.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast-notification" class="fixed top-20 right-5 bg-green-500 text-white py-2 px-5 rounded-lg shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out">
+        Item added to cart!
+    </div>
+<script src="E-commerce.js"></script>
+
+    
+</body>
+</html>
+
